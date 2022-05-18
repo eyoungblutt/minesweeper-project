@@ -1,0 +1,15 @@
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\bin\Debug\net6.0\Minesweeper project.exe
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\bin\Debug\net6.0\Minesweeper project.deps.json
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\bin\Debug\net6.0\Minesweeper project.runtimeconfig.json
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\bin\Debug\net6.0\Minesweeper project.dll
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\bin\Debug\net6.0\Minesweeper project.pdb
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.csproj.AssemblyReference.cache
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.AssemblyInfoInputs.cache
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.AssemblyInfo.cs
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.csproj.CoreCompileInputs.cache
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.dll
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\refint\Minesweeper project.dll
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.pdb
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\Minesweeper project.genruntimeconfig.cache
+C:\Users\eriny\OneDrive\Desktop\WooliesX\betelgeus-resources\minesweeper-project\Minesweeper project\obj\Debug\net6.0\ref\Minesweeper project.dll
