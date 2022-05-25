@@ -2,53 +2,168 @@
 
 namespace Minesweeper_project // Note: actual namespace depends on the project name.
 {
-    internal class Program
+    internal class Program // CREATES GRID AND USER INPUT
     {
         static void Main(string[] args)
         {
-            int coordinate1;
-            int coordinate2;    
 
+            int[,] grid = Mines.plantBombs(); 
 
-            int[,] GridArray = new int[9, 9]; //creating an multidimensional array
-            Console.WriteLine("Pick your Coordinates"); //first coordinate is entered
-            coordinate1 = Convert.ToInt32(Console.ReadLine());
-
-            
-             coordinate2 = Convert.ToInt32(Console.ReadLine()); //second coordinate is entered and returns below value that has been assigned to the grid array coordinate.
-            GridArray[coordinate1, coordinate2] = 4; //assigning value to a specific part of the array
-            GridArray [5, 3] = 5;
-
-            // have people readline and enter two coordinates which are fed into the below?
-
-
-            Console.WriteLine(GridArray[coordinate1, coordinate2]); //returning the value at this apr tof the array 
-            Console.WriteLine(GridArray [5, 3]);
-            //Console.WriteLine(GridArray[9, 9]); showa up as outside the bounds of the array?
-
-
-            //foreach (var i in GridArray)
-            ////{
-            ////    Console.WriteLine(i); //displays a row of zeros
-            //}
            
+                int[,] userGrid = new int[10, 10];
+                
+                for (int i = 0; i < 10; i++) // planting bombs in the new grid array
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
 
-            // Console.WriteLine("Welcome to Minesweeper");
-            //Console.WriteLine("What is your name?");
-            // name = Console.ReadLine();
-            //Console.WriteLine($"Welcome {name}, lets play!");
+
+                        int col = i ;
+                        int row = j ;
+                        userGrid[row, col] = grid[i,j]; //original tutorial had a .mine added on for it??
+                      // Console.WriteLine(userGrid[row, col]); // how has 10 x mines = 0
+                    }
+
+                }
+
+            bool isValid(int row, int col)
+            {
+                return (row >= 0) && (col <= 9) && (col >= 0) && (row <= 9);
+
+            }
+
+
+            void addingNumbers(int row, int col)
+                {
+
+                    int minesNearBy;
+                   
+                            for (int count = 0; count < 90; count++)
+                            {
+
+
+                                if (isValid(row - 1, col - 1) == true && userGrid[row - 1, col - 1] == 0)
+                                {
+
+                                    count++;
+
+                                }
+
+
+                                if (isValid(row - 1, col) == true && userGrid[row - 1, col] == 0)
+                                {
+                                    count++;
+                                }
+
+
+                                if (isValid(row - 1, col + 1) == true && userGrid[row - 1, col + 1] == 0)
+                                {
+
+                                    count++;
+
+                                }
+
+                                if (isValid(row, col - 1) == true && userGrid[row, col - 1] == 0)
+                                {
+
+                                    count++;
+
+                                }
+
+                                if (isValid(row, col + 1) == true && userGrid[row, col + 1] == 0)
+                                {
+
+                                    count++;
+
+                                }
+
+                                if (isValid(row + 1, col - 1) == true && userGrid[row + 1, col - 1] == 0)
+                                {
+
+                                    count++;
+                                }
+
+                                if (isValid(row + 1, col) == true)
+                                {
+                                    if (userGrid[row + 1, col] == 0)
+                                    {
+
+                                        count++;
+
+                                    }
+
+                                    if (isValid(row + 1, col + 1) == true && userGrid[row + 1, col + 1] == 0)
+                                    {
+
+                                        count++;
+                                    }
+                                }
+                                //else if (userGrid[row, col] == 0)
+                                //{
+                                //    Console.WriteLine("Boom!");
+                                //    break;
+                                //}
+                                minesNearBy = count;
+
+                                Console.WriteLine("Be careful! There are " + minesNearBy + " bombs near you");
+                                break;
+
+                            }
+                            Console.WriteLine();
+                           
+
+                  
+                }
+               
+
+                int RowCoord;
+                int ColumnCoord;
+
+
+
+                Console.WriteLine("Welcome to MineSweeper!");
+                    Console.WriteLine("To play, enter two coordinates e.g 5 then 8 to sweep for mines");
+
+                int GuessesToWin = 90;
+                int guess;
+                for ( guess = 0; guess < GuessesToWin; guess++)
+                {
+               
+                    Console.WriteLine("Pick your row coordinate");
+                    RowCoord = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Pick your column coordinate");
+                    ColumnCoord = int.Parse(Console.ReadLine());
+
+                    if (userGrid[RowCoord, ColumnCoord] == 0)
+                    {
+                        Console.WriteLine("Boom!");
+                        Console.WriteLine("Game Over");
+                        break;
+                    }
+                     if (guess <= GuessesToWin)
+                    {
+                        addingNumbers(RowCoord, ColumnCoord);
+
+
+                        Console.WriteLine($"Guess number {guess} ");
+                    }
+                   
+                }
+                if (guess >= GuessesToWin)
+                    {
+                Console.WriteLine($"You missed all the mines. You won!");
+            
+            }
+
+        }
 
 
 
         }
 
 
-        //MultiDimensional Array 
-        //coordinates would be rrow/column
-        //row horizozntal starts at 0 - 9
-        //clumn - vertical goes from 0 - 9
-        // player would enter coordinated 4, 8 and the square at row 4 column 8 would then say either number or mine.
+        }
 
 
-    }
-}
+    
+
